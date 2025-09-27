@@ -13,8 +13,14 @@ def main():
 
     #game loop
     while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+        
         screen.fill((0, 0, 0))  # Fill the screen with black
         pygame.display.flip()  # Update the full display Surface to the screen
+        
+        
 
 
 if __name__ == "__main__":
